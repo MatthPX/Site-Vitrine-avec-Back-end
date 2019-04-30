@@ -1,0 +1,42 @@
+<?php include 'header.php'; ?>
+		<?php if(!isset($_SESSION['admin'])) :?>   <!-- VErifie si la condition est FALSE grâce à '!' -->
+
+	<?php header('Location: admin.html'); ?>
+
+	<?php else:?>
+		<h1> Gestion des soins </h1>
+
+		<fieldset class='dashboard'><legend><h2>Tableau de Bord</h2></legend>
+			<table >
+				<thead>
+					<tr >
+						<th>ID</th>
+						<th>Date</th>
+						<th>Titre</th>
+						<th>Avis</th>
+						<th>Nom </th>
+						<th>Note</th>
+						<th>Mail</th>
+						<th>Statut</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+<?php foreach($all_avis as $key => $avis) :?>
+				<tbody class='livreortab'>
+					
+					<th><?= $avis['ID'] ?></th>
+					<th><?= $avis['Date'] ?></th>
+					<th><?= $avis['Titre'] ?></th>
+					<th><?= $avis['Commentaire'] ?>  </th>
+					<th><?= $avis['Nom'] ?>  </th>
+					<th><?= etoiles($avis['Note']) ?>  </th>
+					<th><?= $avis['Email'] ?>  </th>
+					<th><?= statut($avis['Statut']) ?>  </th>
+						<th><a href='retirer.php?id=<?=$avis['ID']?>'>Retirer </a><br>
+					 <a href='supprimer.php?id=<?=$avis['ID']?>'>Supprimer </a>
+					 <a href='valider.php?id=<?=$avis['ID']?>'>Valider </a></th>
+				</tbody>
+			<?php endforeach ?>
+				</fieldset>
+			</table>
+				<?php endif; ?>

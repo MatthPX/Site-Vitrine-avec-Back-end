@@ -1,0 +1,47 @@
+<?php include 'header.php'; ?>
+					<h1 class='decalTitre'>Me contacter</h1>
+					<main class='contacter'>
+						<div class='bloc'>
+							<article>
+								<h2>Mes coordonnées</h2>
+								<address>
+									<p class='picto'><i class="fas fa-map-marker"></i> 6 Avenue Halley, 59650 Villeneuve d'Ascq</p>
+									<p class='picto'><i class="fas fa-envelope-open"> </i> Email : <a href="mailto:info@soinsetsens.fr">info@soinsetsens.fr</a><br>
+										<p class='picto'>  <i class="fas fa-phone"> </i> Téléphone : <a href="tel:+33662727500">06 62 72 75 00</a>
+										</p>
+									</address>
+									<p>Vous pouvez aussi remplir le formulaire ci-dessous.</p>
+									<p><span class='asterix'>(*) </span>Champs obligatoires</p>
+									<form method="post" action="action.php">
+										<p><label for="Nom">Nom <span class="asterix">*</span><br></label><input type="text" name="nom" id="Nom"></p>
+										<p><label for="email">Email <span class="asterix">*</span><br></label><input type="email" name="email" id="email"></p>
+										<p><label for="phone">Téléphone</label><br><input type="tel" name="phone" id="phone"></p>
+										<p><label for="sujet"> Sujet <span class="asterix">*</span><br></label>
+											<select name="sujet" size="1" id="sujet">
+												<option>Veuillez faire un choix</option>
+												<option>Demande d'info</option>
+												<option>Demande de remboursement</option>
+												<option>Changement Rdv</option>
+											</select></p>
+											<p><label for="message">Message <span class="asterix">*</span><br></label><textarea  name="message" id="message"></textarea></p>
+											<p><input type="checkbox" name="gpd" value="true" class='noot'> <span class="asterix">*</span> En soumettant ce formulaire, j'accepte la <a href="politique-de-confidentialite.html">politique de confidentialité du site</a> ; j'accepte que les informations saisies soient exploitées dans le cadre de la relation qui peut en découler.</p>
+										</form>
+										<p class="center"><button type="submit"><i class="fas fa-paper-plane"> </i> Envoyer </button></p>
+									</article>
+									<aside class="heures">
+										<h2>Heures d'ouvertures</h2>
+										<ul>
+											<li>Lundi : de 9h30 à 19h30</li>
+											<li>Mardi : de 9h30 à 19h30</li>
+											<li>Mercredi : de 9h30 à 19h30</li>
+											<li>Jeudi : de 9h30 à 19h30</li>
+											<li>Vendredi : de 9h30 à 20h30</li>
+											<li>Samedi : de 9h30 à 12h30</li>
+											<li class="red">Dimanche : fermé</li>
+										</ul>
+										<h2>Plan d'accés</h2>
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2532.071082878615!2d3.1482589157370766!3d50.60721667949727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d7b1b6e0c683%3A0x2fe3081b3b307097!2sOlivarius+Apart&#39;Hotel!5e0!3m2!1sfr!2sfr!4v1552916907234" width="600" height="450" style="border:0" allowfullscreen></iframe>
+									</aside>
+								</div>
+							</main>
+						<?php include 'footer.php'; ?>

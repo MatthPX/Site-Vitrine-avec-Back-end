@@ -1,0 +1,1 @@
+<?php include 'templates/politique-de-confidentialite.phtml';

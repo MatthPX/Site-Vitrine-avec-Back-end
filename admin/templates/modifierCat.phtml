@@ -1,0 +1,23 @@
+	<?php include 'header.php'; ?>
+	<main>
+	<?php if(!isset($_SESSION['admin'])) :?>   <!-- VErifie si la condition est FALSE grâce à '!' -->
+
+	<?php header('Location: admin.html'); ?>
+
+	<?php else:?>
+		<section>
+		<h1> Modifier une categorie</h1>
+		<form action='maj_cat.php?id=<?=$id ?>' method='post' enctype="multipart/form-data" class='categorie'>
+		<p><label>Titre <span class="asterix">*</span>: </label><input type='text' name='produit' required="" value="<?= $result['Nom']?>"></p>
+	
+								<label id="publie"> Publié ? <span class="asterix">*</span></label>
+								<input type="radio"  name="publish" value="1" > Oui
+								<input type="radio"  name="publish" value="0" > Non
+							<br>
+		<button>Modifier</button>
+		 </fieldset>
+
+		</form>
+	</section>
+</main>
+			<?php endif; ?>

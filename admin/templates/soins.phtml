@@ -1,0 +1,59 @@
+	<?php include 'header.php'; ?>
+	<?php if(!isset($_SESSION['admin'])) :?>   <!-- VErifie si la condition est FALSE grâce à '!' -->
+
+	<?php header('Location: admin.html'); ?>
+
+	<?php else:?>
+		<h1> Gestion des soins </h1>
+
+		<fieldset class='dashboard'><legend><h2>Tableau de Bord</h2></legend>
+			<table >
+				<thead>
+					<tr >
+						<th>ID</th>
+						<th>Nom</th>
+						<th>Description</th>
+						<th>Prix </th>
+						<th>Modification ?</th>
+					</tr>
+				</thead>
+<?php foreach($soins_promus as $key => $soins) :?>
+				<tbody id='display'>
+					
+					<th><?= $soins['ID'] ?></th>
+					<th><?= $soins['Nom'] ?></th>
+					<th><?= $soins['Description'] ?></th>
+					<th><?= $soins['Prix'] ?> € </th>
+					<th><a href='modifier.php?id=<?=$soins['ID']?>'>Modifier ? </a></th>
+				</tbody>
+			<?php endforeach ?>
+				</fieldset>
+			</table>
+		<fieldset class='addProduct'><legend><h3> Ajout de produit </h3></legend>
+		<form action='new_soin.php' method='post' enctype="multipart/form-data" >
+		<p><label>Titre <span class="asterix">*</span>: </label><input type='text' name='produit' required=""></p>
+		<p><label>Description <span class="asterix">*</span>: </label><input type='text' name='desc' required=""></p>
+		<p><label>Durée en minutes <span class="asterix">*</span>: </label><input type='number' name='duree' required=""></p>
+		<p><label>Prix en Euros <span class="asterix">*</span>: </label><input type='text' name='prix' required=""></p>
+		<p><label>Catégorie <span class="asterix">*</span>: </label><select name='categorie' required=""></p>
+			<option value='1' selected> Massage Visage </option>
+			<option value='2' selected> Massage Corps </option>
+			<option value='3' selected> Réfléxologie Plantaire </option>
+		</select>
+		<p><label>Image <span class="asterix">*</span>: </label><input type='file' name='img' accept='image/png, image/jpeg' ></p>
+		<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+		
+								<label id="publie"> Publié ? <span class="asterix">*</span></label>
+								<input type="radio"  name="publish" value="1" > Oui<input type="radio"  name="publish" value="0" > Non
+								<br>
+					
+								<label id="publie"> Promouvoir ? <span class="asterix">*</span></label>
+								<input type="radio"  name="promu" value="1" > Oui
+								<input type="radio"  name="promu" value="0" > Non
+							
+		
+		<button>Ajouter</button>
+		 </fieldset>
+		</form>
+
+		<?php endif; ?>

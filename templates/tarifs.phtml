@@ -1,0 +1,29 @@
+<?php include 'header.php'; ?>
+                    <main>
+                        <section>
+                            <h1>Tarifs des soins et modelages</h1>
+                            <div class="tableau">
+                                <p class='red'>Tout rendez-vous pris et non annulé 24 heures à l'avance est dû.</p>
+                                <table>
+                                    <thead>
+                                        <tr class="premiereColonne">
+                                            <th>Soin</th>
+                                            <th>Durée</th>
+                                            <th>Tarif</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach($tarifs_soins as $key => $tarifs) :?>
+                                        <tr class=<?php if($key%2 == 0): echo "";else: echo"paire"; endif;?> >
+                                            <td><?= $tarifs['Nom']?></td>
+                                            <td><?= $tarifs['Prix']?> Minutes</td>
+                                            <td><?= $tarifs['Durée']?></td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                       <?php endforeach; ?>
+                                </table>
+                            </div>
+                        </section>
+                    </main>
+        <?php include 'footer.php'; ?>

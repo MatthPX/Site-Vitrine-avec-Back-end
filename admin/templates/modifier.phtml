@@ -1,0 +1,40 @@
+	<?php include 'header.php'; ?>
+	<?php if(!isset($_SESSION['admin'])) :?>   <!-- VErifie si la condition est FALSE grâce à '!' -->
+
+	<?php header('Location: admin.html'); ?>
+
+	<?php else:?>
+		<main>
+			<section>
+		<h1> Modifier un soin</h1>
+		<form action='maj_soin.php?id=<?=$id ?>&img=<?=$result['Photo']?>' method='post' enctype="multipart/form-data" class='categorie' >
+		<p><label>Titre <span class="asterix">*</span>: </label><input type='text' name='produit' required="" value="<?= $result['Nom']?>"></p>
+		<p><label>Description <span class="asterix">*</span>: </label><input type='text' name='desc' required=""value="<?= $result['Description']?>"></p>
+		<p><label>Durée en minutes <span class="asterix">*</span>: </label><input type='number' name='duree' required=""value="<?= $result['Durée']?>"></p>
+		<p><label>Prix en Euros <span class="asterix">*</span>: </label><input type='text' name='prix' required=""value="<?= $result['Prix']?>"></p>
+		<p><label>Catégorie <span class="asterix">*</span>: </label><select name='categorie' required=""value="<?= $result['id_cat']?>"></p>
+			<option value='1' selected> Massage Visage </option>
+			<option value='2' > Massage Corps </option>
+			<option value='3' > Réfléxologie Plantaire </option>
+			<option value='4' > Special One </option>
+		</select>
+		
+		<p><label>Image <span class="asterix">*</span>: </label><input type='file' name='img' accept='image/png, image/jpeg' ></p>
+		<img src='../img/soins/<?= $result['Photo']?>'>
+		<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+		<br>
+								<label id="publie"> Publié ? <span class="asterix">*</span></label>
+								<input type="radio"  name="publish" value="1" > Oui
+								<input type="radio"  name="publish" value="0" > Non
+						<br>
+								<label id="publie"> Promouvoir ? <span class="asterix">*</span></label>
+								<input type="radio"  name="promu" value="1" > Oui
+								<input type="radio"  name="promu" value="0" > Non
+						
+		<br>
+		<button>Modifier</button>
+		 </fieldset>
+
+		</form>
+	</section>
+			<?php endif; ?>

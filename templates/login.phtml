@@ -1,0 +1,74 @@
+<?php include 'header.php'; ?>
+	<body>
+		<main>
+			<section>
+			<?php if(!isset($_SESSION['connected'])) :?> 
+			<fieldset  class='login'><legend><h2>Connexion</h2></legend>
+		<form action='login.php' method='post' class='create'> <!--mETHOD GET pour laisser une trace ??  + FORMULAIRE RELANCE AUTOMATIQUEMENT LA PAGE-->
+		<p><label>Votre mail : </label><input type='text' name='login'></p>
+		<p><label>Votre mot de passe : </label><input type='password' name='mdp'></p>
+			<button>Valider</button>
+		</fieldset>
+		</form>
+</section>
+
+		<section>
+			<fieldset  class='login'><legend><h2>Créer un compte</h2></legend>
+		<form action='account.php' method='post' class='create'>
+			<p><label>Nom : <input type='text' name='nom'></p>
+			<p><label>Prenom : <input type='text' name='prenom'></p>
+			<p><label>Adresse : <input type='text' name='adresse'></p>
+			<p><label>Code Postal : <input type='number' name='cp'></p>
+			<p><label>Ville : <input type='text' name='ville'></p>
+			<p><label>Téléphone : <input type='phone' name='phone'></p>
+			<p><label>Mail : <input type='mail' name='mail'></p>
+			<p><label>Mot de passe : <input type='password' name='pw'></p>
+			<p><label>Confirmer mot de passe : <input type='password' name='pw_repeat'></p>
+			<button> Valider </button>
+			</fieldset>
+		</form>
+</section>
+	<?php else:?>
+		<h2>Bienvenue dans votre espace personnel  <?= $_SESSION['Log'] ?> </h2>
+		<a href="deconnexion.php">Se déconnecter</a>
+			<fieldset class='dashboard'><legend><h3>Modération</h3></legend>
+			<table >
+				<thead>
+					<tr >
+						<th>ID Commande</th>
+						<th>Date</th>
+						<th>Prix Total</th>
+						<th>ID Client </th>
+						<th>Prenom</th>
+						<th>Nom</th>
+						<th>Adresse</th>
+						<th>Mail</th>
+						<th>Statut</th>
+					</tr>
+				</thead>
+				<tbody id='display'>
+<?php foreach($user_command as $key => $commandes) :?>
+				
+					<tr>
+					<td><?= $commandes['Id_commande'] ?></td>
+					<td><?= $commandes['Date'] ?></td>
+					<td><?= $commandes['prix_total'] ?>  €</td>
+					<td><?= $commandes['ID_client'] ?> </td>
+					<td><?= $commandes['Nom'] ?></td>
+					<td><?= $commandes['Prenom'] ?></td>
+					<td><?= $commandes['Adresse'] ?>
+						<?= $commandes['CP'] ?>
+						<?= $commandes['Ville'] ?>
+					</td>
+					<td><?= $commandes['Mail'] ?></td>
+					<td class='details' data-id="<?=$commandes['Id_commande'] ?>">Détails...</td>
+				</tr>
+				
+			<?php endforeach ?>
+			</tbody>
+				</fieldset>
+			</table>
+			<?php endif; ?>
+		</main>
+		</body>
+<?php include 'footer.php'; ?>

@@ -1,0 +1,26 @@
+<?php include 'header.php'; ?>
+					<main class='livredor'>
+						<h1>Signer le livre d'or de Soins & Sens</h1>
+						<p>Votre avis sera publié après validation par le modérateur du site.</p>
+						<p><span class='asterix'>(*)</span> Champs obligatoires</p>
+						<form method="post" action="ecrire-avis.php">
+							<p><label for="titre">Titre<span class="asterix">*</span></label><input type="text" name="titre" id="titre"></p>
+							<p><label for="nom">Nom <span class="asterix">*</span></label><input type="text" name="nom" id="nom"></p>
+
+							<p><label for="email">E-mail<span class="asterix">*</span></label><input type="email" name="email" id="email"></p>
+							<div class='inline'>
+								<label id="note"> Note <span class="asterix">*</span></label>
+
+								<input type="radio"  name="option1" value="1" > Horrible
+								<input type="radio"  name="option1" value="2" > Médiocre
+								<input type="radio"  name="option1" value="3"> Moyen
+								<input type="radio"  name="option1" value="4" > Très bien
+								<input type="radio"  name="option1" value="5"> Excellent
+							</div>
+							<p><label for="avis">Votre avis <span class="asterix">*</span></label><textarea  name="avis" id="avis"></textarea></p>
+							<p class='confi'><input type="checkbox" name="gpd" value="true"> <span class="asterix">*</span> En soumettant cet avis, j'accepte la <a href="politique-de-confidentialite.html">politique de confidentialité du site</a> du site ; j'accepte que cette publication soit lisible avec mon nom, ma note et la date sur la page du livre d'or de ce site. </p>
+						
+						<p class="center"><button type="submit"><i class="fas fa-paper-plane"> </i> Envoyer </button></p>
+</form>
+					</main>
+<?php include 'footer.php'; ?>

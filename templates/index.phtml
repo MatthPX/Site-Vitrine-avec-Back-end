@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="Reflexo, esthéticienne, modelage, massage, bien-être, bien etre, énergétique, polarité, polarisant, soin, massage à domicile, bien-être à domicile, lille, nord, 59">
+	<meta name="description" content="Réflexologie plantaire, accompagnement en développement personnel, polarité et massage bien-être pour femme au cabinet à Saint André-Lez-Lille et à domicile sur Lille métropole.">
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="icon" href="img/favicon.png" />
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous"></script>
+	<title>Page d'accueil</title>
+</head>
+<body>
+	<header>
+		<div class='logo'>
+			<a href="index.php"><img src="img/logo.jpg" class="logo" alt="logo"></a>
+		</div>
+		<button class="hamburger">&#9776;</button>
+		<div class="menu">
+			<nav>
+				<ul>
+					<li > <a href="index.php" ><i class="fas fa-home"></i></a></li>
+					<li> <a href="apropos.php">Qui suis-je ?</a></li>
+					<li class='soins'>Soins <i class="fas fa-angle-down"></i>
+					<div class='sousmenu'>
+							<?php foreach($nav_soins as $cat) :?>
+								<ul>
+								<li><a href="soins.php?id=<?=$cat['ID']?>"><?= $cat['Nom'] ?></a>
+								</li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
+					<li class='test'>Tarifs <i class="fas fa-angle-down"></i>
+						<div class="sousmenu1">
+							<ul>
+								<li><a href='boutique.php'>Boutique</a></li>
+								<li><a href='tarifs.php'>Tarifs des soins et modelages</a></li>
+						</ul>
+					</div>
+					<li class="test1">Livre d'or <i class="fas fa-angle-down"></i>
+						<div class="sousmenu2">
+							<ul>
+								<li><a href='avis-clients.php'>Avis Client</a></li>
+								<li><a href='ecrire-avis.php'>Signer le livre d'or</a></li>
+						</ul>
+					</div>
+					<li><a href="contact.php">Contact</a></li>
+							<li><a href="login.php"><?php if(!isset($_SESSION['connected'])) :?> Se connecter</a></li>
+							<?php else:?> Mon compte </a></li>
+										<?php endif; ?>
+							<li><a href="panier.php"><i class="fas fa-shopping-basket"></i></a></li>
+				</ul>
+			</nav>
+		</div> 
+		<figure class='stopCarroussel' >
+			<img src='img/slides/soins-et-sens.jpg' alt='banniere'>
+			<h2 class="titre2"></h2> <!-- titre de l'image --->			
+			<p class='titre22'></p><!-- Légende image --->
+			<button class='slide'></button>
+			<button class='left'><i class="fas fa-angle-left"></i></button>
+			<button class='right'><i class="fas fa-angle-right"></i></button>
+		</figure>
+	</header>
+	<main>
+		
+		<section >
+			<h1>Institut de massage</h1>
+			<div class="presentation">
+				<article>
+					<h2>Prendre soin de soi</h2>
+					<p><strong>Soins et Sens</strong> est un salon de relaxation, totalement aménagé pour vous faire voyager dans le pays du <strong>bien-être.</strong></p>
+					<p>Situé à Villeneuve d'Ascq près de l'hôtel Olivarius, à proximité du parc scientifique de la Haute Borne et de Synergy Park, il est implanté au coeur des entreprises afin que vous puissez vous accorder une pause détente le midi ou après une journée de travail.</p>
+					<p>Les soins de bien-être provoquent un sentiment d'évasion, ils vou permettent de vous détendre, de vous dé-stresser et d'être plus efficace au travail.</p>
+					<p>Au plaisir de vous accueillir !</p>
+				</article>
+				<aside class="heures">
+					<h2>Heures d'ouvertures</h2>
+					<ul>
+						<li>Lundi : de 9h30 à 19h30</li>
+						<li>Mardi : de 9h30 à 19h30</li>
+						<li>Mercredi : de 9h30 à 19h30</li>
+						<li>Jeudi : de 9h30 à 19h30</li>
+						<li>Vendredi : de 9h30 à 20h30</li>
+						<li>Samedi : de 9h30 à 12h30</li>
+						<li class='red'>Dimanche : fermé</li>
+					</ul>
+				</aside> 
+			</div>
+		</section>
+		<div class="fetesDesMeres">
+			<h2>Bientôt la fête des mères</h2>
+			<h3>Offrez lui un moment de détente !</h3>
+		</div>
+		<h2>Mes soins</h2>
+		<section class="soins">
+			  <?php foreach($index_soins as $soins) :?>
+			<article>
+				
+				<h3><?= $soins['Nom'] ?></h3>
+				<img src="img/soins/<?= $soins['Photo']?>" alt='<?= $soins['Nom'] ?>'>
+				<p><?= $soins['Description']?></p>
+				<a href="soins.php"> En savoir plus <i class="fas fa-plus-circle"> </i></a>
+				 	
+			</article>
+		<?php endforeach; ?>
+		</section>
+		<hr>
+		<section class='rendezvous'>
+			<article class="rdv">
+				<h2><i class="fas fa-calendar">   </i> Prendre rendez-vous</h2>
+				<p>Pour prendre rendez-vous, je vous invite à me téléphoner ou m'envoyer un texto au 06 62 72 75 00.</p>
+				<p>Vous pouvez également <a href='https://www.resalib.fr/' target="_blank">réserver votre séance</a> sur Resalib.</p>
+			</article>
+
+			<article class="cadeau">
+				<h2><i class="fas fa-gift">   </i> L'idée cadeau</h2>
+				<p>Pensez-y à l'occasion d'un mariage, d'un anniversaire, de la Saint-Valentin, de la fête des mères ou de la fête des pères, comme cadeau de Noël ou pour les fêtes de fin d'année.</p>
+				<p>Achetez un bon cadeau sur la <a href='boutique.php'>boutique en ligne.</a></p>
+			</article>
+		</section>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2532.071082878615!2d3.1482589157370766!3d50.60721667949727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d7b1b6e0c683%3A0x2fe3081b3b307097!2sOlivarius+Apart&#39;Hotel!5e0!3m2!1sfr!2sfr!4v1552916907234" width="600" height="450" style="border:0" allowfullscreen></iframe>
+	</main>
+			<?php include 'footer.php'; ?>

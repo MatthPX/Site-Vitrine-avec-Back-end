@@ -1,0 +1,23 @@
+<?php include 'header.php';?>
+<main>
+  <section>
+   <h1>Soins bien-être et modelages</h1>
+
+
+   <article>
+    <?php foreach($types_soins as $key => $soins) :?>
+        <h2><?= $soins['Nom'] ?></h2>             
+        <div class=<?php if($key%2 == 0): echo "gauche";else: echo"droite"; endif;?>><!--CONDITION POUR RESPECTER LA REPARTITION DROITE GAUCHE SELON NOMBRE D ENTREES -->
+            <picture class='soins_promus'>
+               <source media="(max-width: 767px)" srcset="img/soins/<?= $soins['photo_mobile']?>">
+                   <source media="(max-width: 1023px)" srcset="img/soins/<?= $soins['photo_tablette']?>">
+                      <img src="img/soins/<?= $soins['Photo']?>" alt='massage-tete'>
+                  </picture>
+                  <p><?= $soins['Description']?></p>
+                  <div class="clear"></div>
+              </div>
+          <?php endforeach; ?>
+      </article>   
+  </section>
+</main>
+<?php include 'footer.php'; ?>

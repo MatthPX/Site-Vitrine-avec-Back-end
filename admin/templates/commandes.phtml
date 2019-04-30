@@ -1,0 +1,50 @@
+<?php include 'header.php'; ?>
+		<?php if(!isset($_SESSION['admin'])) :?>    <!-- VErifie si la condition est FALSE grâce à '!' -->
+		
+		<?php header('Location: admin.html'); ?>
+
+	<?php else:?>
+		<h1>Bonjour <?= $_SESSION['Log'] ?> </h1>
+				<a href="deconnexion.php" class='login'>Se déconnecter</a>
+<h2> Gestion des commandes </h2>
+			<?php endif; ?>
+			<fieldset class='dashboard'><legend><h3>Modération</h3></legend>
+			<table >
+				<thead>
+					<tr >
+						<th>ID Commande</th>
+						<th>Date</th>
+						<th>Prix Total</th>
+						<th>ID Client </th>
+						<th>Prenom</th>
+						<th>Nom</th>
+						<th>Adresse</th>
+						<th>Mail</th>
+						<th>Statut</th>
+					</tr>
+				</thead>
+				<tbody id='display'>
+<?php foreach($all_command as $key => $commandes) :?>
+				
+					<tr>
+					<td><?= $commandes['Id_commande'] ?></td>
+					<td><?= $commandes['Date'] ?></td>
+					<td><?= $commandes['prix_total'] ?>  €</td>
+					<td><?= $commandes['ID_client'] ?> </td>
+					<td><?= $commandes['Nom'] ?></td>
+					<td><?= $commandes['Prenom'] ?></td>
+					<td><?= $commandes['Adresse'] ?>
+						<?= $commandes['CP'] ?>
+						<?= $commandes['Ville'] ?>
+					</td>
+					<td><?= $commandes['Mail'] ?></td>
+					<td class='details' data-id="<?=$commandes['Id_commande'] ?>">Détails...</td>
+				</tr>
+				
+			<?php endforeach ?>
+			</tbody>
+				</fieldset>
+			</table>
+						<script src="script.js"></script>
+		</body>
+	</html>

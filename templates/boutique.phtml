@@ -1,0 +1,83 @@
+<?php include 'header.php'; ?>
+                    <main class="chequesCadeaux">
+                        <section class="boutique">
+                            <h1>Boutique</h1>
+                            <p>Pensez-y à l'occasion d'un mariage, comme cadeau de naissance ou d'anniversaire, pour la Saint-Valentin, la fête des mères ou la fête des pères, comme cadeau de Noël ou pour les fêtes de fin d'année.</p>
+                            <p>Choisissez une prestation dans la boutique ci-dessous. Selon votre choix le bon cadeau est envoyé par mail ou par voie postale à l'adresse souhaitée. Le rendez-vous est pris ensuite par le bénéficiaire. Les bons cadeaux sont valables 6 mois.</p>
+                            <p>Voir les <a href="politique-de-confidentialite.html" target="_blank">conditions générales de vente.</a></p>
+                        </section>
+
+                        <div class="bloc">
+                           <section class='cheque'>
+                            <h2>Les chèques cadeaux</h2> 
+                            <div class='articleAll'>
+                                <?php foreach($soins_boutique as $soins) :?>
+                                <article>
+                                  <h3> <?= $soins['Nom'] ?> </h3>
+                                    <picture>
+                                        <source media="(max-width: 767px)" srcset="img/soins/<?= $soins['Photo']?>">
+                                            <source media="(max-width: 1023px)" srcset="img/soins/<?= $soins['Photo']?>">
+                                                <img src="img/soins/<?= $soins['Photo']?>" alt="<?= $soins['Nom'] ?>">
+                                            </picture>
+                                            <p><?= $soins['Prix'] ?> Euros</p>
+                                            <p class="red"><i class="fas fa-heart"></i> Ajouter à ma liste d'envie</p>
+
+                                            <select id="nbPlantaire">
+                                                <option value="1" selected>1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select> 
+                                            <button data-id="<?= $soins['Id'] ?>" data-name="<?= $soins['Nom'] ?>" data-price="<?= $soins['Prix'] ?>" class="add_to_cart"><i class="fas fa-shopping-cart"></i></button>
+                                        </article>
+                                            <?php endforeach; ?>
+
+                                       <!-- <article>
+                                            <h3>Massage bien-être</h3>
+                                            <picture>
+                                                <source media="(max-width: 767px)" srcset="img/soins/massage-californien.jpg">
+                                                    <source media="(max-width: 1023px)" srcset="img/soins/massage-californien-300x199.jpg">
+                                                        <img src="img/soins/massage-californien-200x133.jpg" alt="massage californien">
+                                                    </picture>
+                                                    <p>60€ l'unité</p>
+                                                    <p class="red"><i class="fas fa-heart"></i>Ajouter à ma liste d'envie</p>
+
+                                                    <select id="nbBienetre">
+                                                        <option value="1" selected>1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select> <button id="bienetre"><i class="fas fa-shopping-cart"></i></button>
+                                                </article>
+
+                                                <article>
+                                                    <h3>Soin relaxant aux pochons</h3>
+                                                    <picture>
+                                                        <source media="(max-width: 767px)" srcset="img/soins/soin-relaxant-pochon-chaud.jpg">
+                                                            <source media="(max-width: 1023px)" srcset="img/soins/soin-relaxant-pochon-chaud-300x199.jpg">
+                                                                <img src="img/soins/soin-relaxant-pochon-chaud-200x133.jpg" alt="soin-relaxant-pochon-chaud">
+                                                            </picture>
+                                                            <p>75€ l'unité</p>
+                                                            <p class="red"><i class="fas fa-heart"></i> Ajouter à ma liste d'envie</p>
+                                                            <select id="nbPochons">
+                                                                <option value="1" selected>1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                            </select> <button id="pochons"><i class="fas fa-shopping-cart"></i></button>
+                                                        </article>
+                                                    </div>
+                                                -->
+                                                </section>
+                                                <section class="listeEnvie">
+                                                  <h2>Ma liste d'envies</h2>  
+                                                  <ul id="listeProduits"></ul> 
+                                                  <div id="panier-resume"></div>
+                                                  <button id="Vider"><i class="fas fa-trash-alt"></i> Vider</button>
+                                              </section>
+                                          </div>
+                                      </main>
+                                 <?php include 'footer.php'; ?>

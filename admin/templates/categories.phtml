@@ -1,0 +1,45 @@
+<?php include 'header.php'; ?>
+<main>
+	<section>
+		<?php if(!isset($_SESSION['admin'])) :?>   <!-- VErifie si la condition est FALSE grâce à '!' -->
+		
+		<?php header('Location: admin.html'); ?>
+
+	<?php else:?>
+		<fieldset class='categorie'><legend><h2>Les catégories</h2></legend>
+			<table >
+				<thead>
+					<tr >
+						<th>ID</th>
+						<th>Nom</th>
+						<th>Statut</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+<?php foreach($categories_promues as $key => $categories) :?>
+				<tbody id='display'>
+					
+					<td><?= $categories['ID'] ?></td>
+					<td><?= $categories['Nom'] ?></td>
+					<td><?= $categories['Statut'] ?></td>
+					<td><a href='modifierCat.php?id=<?=$categories['ID']?>'>Modifier ? </a></td>
+				</tbody>
+			<?php endforeach ?>
+				</fieldset>
+			</table>
+		</section>
+		<section>
+		<fieldset class='addProduct'><legend><h3> Ajouter une catégorie </h3></legend>
+		<form action='new_cat.php' method='post' enctype="multipart/form-data" >
+		<p><label>Titre <span class="asterix">*</span>: </label><input type='text' name='produit' required=""></p>
+		<div class='inline'>
+								<label id="publie"> Publié ? <span class="asterix">*</span></label>
+								<input type="radio"  name="publish" value="1" > Oui
+								<input type="radio"  name="publish" value="0" > Non
+							</div>
+								<button>Ajouter</button>
+		 </fieldset>
+		</form>
+	</section>
+		<?php endif; ?>
+	</main>

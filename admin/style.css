@@ -1,0 +1,1088 @@
+
+/* RESOLUTION MOBILE FIRST */
+picture{
+  max-width:100%;
+}
+body{
+	font-family: 'Montserrat', sans-serif;
+	color: #777;
+	background-color: #FFF;
+	font-size: 1em;
+	line-height: 1.6em;
+
+  margin:0;
+}
+body img{
+  max-width: 100%;
+}
+
+h1, h2, h3{
+	font-family: 'Bree Serif', serif;
+	color: #DD8B0C;
+  font-weight: bold;
+}
+h1{
+  font-size: 2.8em;
+  line-height: 1.4em;
+  font-weight: bold;
+}
+a.actif{
+  text-decoration: underline;
+  color:#824C19 !important;
+}
+
+h2
+{
+  font-size: 1.8em;
+  line-height: 1.3em;
+  font-weight: bold;
+}
+h3{
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+/* HEADER * RESPONSIVE DESIGN PORTABLE */
+
+header
+{
+  background:#ffffff; 
+  line-height: 20px;
+}
+picture img{
+  width:100%;
+  max-width: 100%;
+}
+.logo{
+  display:flex;
+  justify-content: center;
+  position:relative;
+}
+.logo>img:hover
+{
+  opacity: 0.8;
+}
+.hamburger{
+  display:flex;
+  justify-content: center;
+  background : none;
+  margin : 0 auto;
+  text-align: center;
+  padding: 5px 5px 5px 5px;
+  color:#DD8B0C;
+  border:2px solid #DD8B0C;
+  font-size:1.2em;
+  font-weight:bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.menu{
+  z-index:1000000; 
+  background: none;  
+  text-align:center; 
+  display:flex;
+  justify-content: center;
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+.menu ul {
+
+  margin: 0; 
+  padding: 0; 
+  list-style-type: none; 
+  list-style-image: none;
+}
+.menu li {
+
+  text-decoration:none;
+  display: block;   
+  padding:15px 0 5px 0;
+  font-size: 1.2em;
+}
+.menu li:hover{
+  display: block;    
+  background:#ffffff; 
+  padding:15px 0 5px 0;
+  cursor: pointer;
+}
+.menu ul li a { 
+  text-decoration:none;  
+  margin: 0px; 
+  color:#DD8B0C;
+
+}
+.menu ul li{
+  text-decoration:none;  
+  margin: 0px; 
+  color:#DD8B0C;
+
+}
+.sousmenu ul li{
+  font-style: italic; 
+  font-size:1rem;
+  z-index: 955500;
+  background-color: #fff;
+  padding-bottom: 10px;
+  padding-top:10px;
+}
+.sousmenu ul li:nth-child(1){
+  border-bottom: 3px dotted #DD8B0C;
+}
+.sousmenu ul li:nth-child(3){
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.sousmenu1 ul li{
+  font-style: italic; 
+  font-size:1rem;
+  z-index: 955500;
+  background-color: #fff;
+  padding-bottom: 10px;
+  padding-top:10px;
+}
+.sousmenu1 ul li:nth-child(1){
+  border-bottom: 3px dotted #DD8B0C;
+}
+.sousmenu1 ul li:nth-child(2){
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.sousmenu2 ul li{
+  font-style: italic; 
+  font-size:1rem;
+  z-index: 955500;
+  background-color: #fff;
+  padding-bottom: 10px;
+  padding-top:10px;
+}
+.sousmenu2 ul li:nth-child(1){
+  border-bottom: 3px dotted #DD8B0C;
+}
+.sousmenu2 ul li:nth-child(2){
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.menu ul li a:hover { 
+  color: #824c19; text-decoration:none;
+}
+.menu ul>ul  {
+  color : #DD8B0C;
+  font-size:1.2em;
+  
+}
+.menu a{text-decoration:none; color:#DD8B0C;}
+
+.menu a:hover{text-decoration:none; color:#824c19;}
+
+.sousmenu li{
+  font-size:1.2em;
+
+  font-weight: normal;
+}
+.sousmenu1 li{
+  font-size:1.2em;
+  font-weight: normal;
+}
+/*CARROUSEL */
+figure{
+ max-width: 100%;
+ position:relative;
+ margin: 0;
+ padding:0;
+ display: flex;
+ flex-direction:column;
+ align-items: center;
+ box-shadow: 2px 2px 2px 2px #333;
+
+}
+figure img{
+  max-width: 100%;
+  margin: 0 auto;
+}
+.titre2
+{
+  position:absolute;
+  top: 20%;
+  font-size: 1em;
+  color:white;
+  font-weight: bold;
+}
+/* DISPLAY HIDE EN PORTABLE */ 
+figure p{
+  display:none;
+}
+.slide{
+  position:absolute;
+  background-color: #DD8B0C;
+  font-weight: bold;
+  color:white;
+  bottom: 20%;
+  border:none;
+  border-radius: 10px;
+}
+.slide:hover{
+  opacity: 0.7;
+}
+figure .left{
+  background:none;
+  color:white;
+  border-style: none;
+  font-size: 2rem;
+  position: absolute;
+  top:40%;
+  left: 0;
+}
+figure .right{
+ background:none;
+ color:white;
+ border-style: none;
+ font-size: 2rem;
+ position: absolute;
+ top:40%;
+ right: 0;
+} 
+
+/*    MAIN    */
+main{
+ min-height: 420px;
+}
+main section{
+  max-width: 1200px;
+  margin-bottom:40px;
+  margin: 0 auto;
+}
+main .bloc{
+  max-width: 1200px;
+  margin:0 auto;
+}
+main p, h1,h2,h3{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+.fetesDesMeres {
+	background-image: url(img/fond-promo.jpg);
+  position:relative;
+  height: auto;
+  margin:0 auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+}	
+.fetesDesMeres h2 {
+	color: #FFFFFF;
+  text-align: center;
+}
+.fetesDesMeres h3 {
+	color: #FFFFFF;
+  text-align: center;
+}
+
+
+.red{
+	color: red !important;
+}
+
+.heures ul{
+	padding-left: 4rem;
+	padding-bottom: 3rem;
+}
+
+hr{
+	color: #DD8B0C;	
+  width:96%;
+}
+
+iframe{
+  max-width: 100%;
+  width: 100%;
+}
+
+
+
+
+/*    FOOTER     */
+.footer1{
+  padding-bottom: 20px;
+}
+footer {
+	background-color: #DD8B0C;
+  display:flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+footer article{
+	padding-left: 10px;
+  padding-bottom:0;
+  margin:0;
+}
+
+footer h3{
+	color: #FFFFFF;
+  font-family: 'Bree Serif', serif;
+  padding-top:20px;
+  padding-bottom:20px;
+  margin:0;
+}
+.newsletter{
+  display:flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+}
+
+footer p{
+	color: white;
+  margin-top:0;
+  margin-bottom:10px;
+}
+footer address{
+	color: white;
+}
+footer a{
+	text-decoration: none;
+	color: white;
+ padding-bottom: 0;
+ margin:0;
+}
+footer ul{
+	list-style: none;
+	padding: 0;
+  margin:0;
+}
+
+footer a:hover{
+	text-decoration: underline;
+}
+
+footer button{
+
+	color: #DD8B0C;
+	font-size: 1em;
+	background-color: #FFFFFF;
+  border : 2px solid #FFFFFF;
+  border-radius: 10px;
+
+  margin-bottom: 10px;
+
+}
+
+footer input{
+	
+
+	font-size: 1em;
+	border : 2px solid #FFFFFF;
+  margin-bottom: 10px;
+
+}
+
+.copy {
+	background-color: #FFFFFF;
+	margin: 0;
+	text-align: center;
+  color:#DD8B0C;
+}
+
+/* STYLE A PROPOS */ 
+
+
+
+.steph{
+ overflow:hidden;
+ -webkit-border-radius:100px;
+ -moz-border-radius:100px;
+ border-radius:150px;
+ margin: 0 auto;
+ display: flex;
+ align-content: center;
+}
+
+/* Livre d'or ecrire avis */
+.asterix
+{
+  color:#C50019;
+}
+input[type="submit"]
+{
+  text-align: center;
+}
+form
+{
+  display: inline-block;
+
+}
+
+
+.formulaire label
+{
+  max-width: 100%;
+
+  width:200px;
+}
+.formulaire input[type="text"], .formulaire input[type="email"], .formulaire input[type="nom"],.formulaire input[type="tel"],.formulaire textarea,.formulaire select
+{
+  max-width: 100%;
+  padding-right: 30px;
+
+  width: 90%;
+
+}
+
+.center button
+{
+  background-color: #DD8B0C;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  border-radius: 6px;
+  padding:10px;
+  border: none;
+  margin : auto;
+  display: flex;
+}
+/* STYLE AVIS CLIENTS */
+.avis i{
+  color:#FFD700 ;
+}
+.livreor button 
+{
+  text-align: left;
+  background-color: #DD8B0C;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  border-radius: 6px;
+}
+.inline{
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  margin: 0;
+  padding:0;
+}
+.inline input{
+  margin:5px ;
+}
+.picto i
+{
+  color:#DD8B0C;
+}
+.avis a {
+
+  background-color: #DD8B0C;
+  color: #FFFFFF;
+  border : 2px solid #FFFFFF;
+  border-radius: 5px;
+  font-size: 1em;
+  padding:8px;
+  width:20%;
+  height: auto;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+/*     -------- PAGE TARIFS ---------  */
+
+table{
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  border : 1px solid #DD8B0C;
+}
+
+th, td,tr  {
+  border : 1px solid #DD8B0C;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+td, tr{
+  font-weight: bold;
+}
+
+th{
+  color: #DD8B0C;
+}
+
+.paire{
+  background-color: #FFE6BE;
+  opacity: 1;
+}
+
+.premiereColonne{
+  width: 60%;
+}
+
+/*    -------- PAGE CHEQUES CADEAUX --------- */
+.chequesCadeaux
+{
+  margin: 0 auto;
+}
+.chequesCadeaux a
+{
+  text-decoration: none;
+}
+/*    --------- PAGE BOUTIQUE ------ */
+.chequesCadeaux h2
+{
+  text-align: left;
+}
+.chequesCadeaux h3
+{
+  font-size: 1em;
+}
+.listeEnvie button
+{
+  background-color: #CC0000;
+  border: 2px solid #CC0000;
+  border-radius: 8px;
+  color: white;
+  padding: 8px 16px 8px 16px;
+  font-size: 1em;
+}
+#affichageListe{
+ color: blue;
+ font-style: italic;
+}
+#bienetre{
+  color: #DD8B0C;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 3px 8px 0px 8px;
+}
+
+#pochons{
+  color: #DD8B0C;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 3px 8px 0px 8px;
+}
+#plantaire{
+  color: #DD8B0C;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 3px 8px 0px 8px;
+}
+#myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px;
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: transparent; 
+  color: grey;
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 10px; 
+  font-size: 18px; 
+}
+#vider{
+  margin-bottom: 10px;
+  text-align: center;
+}
+.newsletter input{
+  margin-right: 10px ;
+}
+
+/* BOUTON TOP */
+
+/************************** TABLETTE ************************************/
+@media screen and (min-width:768px)
+{
+
+  nav{
+    font-size: 1.2em;
+  }
+  figure p{
+    display: block;
+    position:absolute;
+    top: 40%;
+    font-size: 1em;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+  }
+  .presentation
+  {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .presentation article{
+    flex:1;
+  }
+  .presentation aside{
+
+    flex:1;
+  }
+  .soins{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+h2{
+    text-align: center;
+  }
+  .soins h3{
+    text-align: center;
+    padding: 0;
+  }
+  .soins article{
+    display:flex;
+    flex-direction: column;
+    align-items: space-between;
+    flex: 1;
+
+  }
+  .rendezvous{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .rendezvous article{
+    width:48%;
+  }
+  .footer1{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+  }
+  .footer1 article{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:33%;
+    padding:0;
+
+  }
+  .newsletter {
+    padding:0;
+    margin:0;
+  }
+  .newsletter1 input[type="email"]{
+    width: 100%;
+
+  }
+  .steph{
+    float:right;
+    margin-bottom: 20px;
+  }
+  .livredor{
+    margin-left: 10px;
+  }
+  .livredor form{
+    display: flex;
+    flex-direction: column;
+  }
+  .livredor input[type="text"],input[type="nom"],input[type="email"],textarea{
+    width: 40%;
+
+
+  }
+  .livredor label{
+    width: 20%;
+  }
+  .livredor p {
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+
+  .confi{
+    display:block !important;
+  }
+  .contacter{
+    display: flex;
+    flex-direction: row;
+  }
+  .contacter article{
+    width:60%;
+  }
+  .contacter aside{
+    width: 40%;
+  }
+  .contacter  h2{
+    margin: 0;
+  }
+  .contacter aside ul{
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    padding-left: 50px;
+  }
+  .contacter article input:not(.noot){
+    width: 50%;
+  }
+  .contacter iframe{
+    margin-top: 10px;
+  }
+  .mentions{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .mentions article{
+
+    flex:1;
+  }
+  .mentions a{
+    text-decoration: none;
+  }
+  .cadeauQuery{
+
+    display: flex;
+    justify-content: space-between;
+  }
+  /*     PAGE SOINS    */
+
+  .gauche img{
+
+    float: left;
+    margin-left: 4px;
+    margin-right: 7px;
+  }
+
+  .clear{
+    clear: both;
+  }
+
+
+  .droite img{
+    float: right;
+    margin-right: 4px;
+    margin-left: 9px;
+  }
+
+  .gauche p{
+    text-align: justify;
+  }
+
+  .droite p{
+    text-align: justify;
+  }
+
+  /*               PAGE BOUTIQUE      */
+
+  .bloc{
+    display: flex;
+    flex-direction: column;
+  }
+  .articleAll{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+
+  }
+  .articleAll article{
+    margin-right: 10px;
+
+  }
+  .articleAll img{
+    width:80%;
+  }
+
+  /*      PAGE TARIFS       */
+
+  table{
+
+    width: 60%;
+  }
+
+  .tableau{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+}
+/************************** DESKTOP ************************************/
+
+@media(min-width: 1024px)
+{
+  /*INDEX.HT */
+  button.hamburger{
+    display: none;
+  }
+
+
+  .fetesDesMeres{
+    width: 100%;
+
+  }
+  button.cross{
+    display: none;
+  }
+  h2.titre2{
+    font-size: 1.8em;
+  }
+  figure p,button{
+    font-size: 1.3em;
+  }
+  .menu nav ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+  }
+  .menu nav{
+    width: 100%;
+  }
+  .menu nav ul li{
+    flex: 1;
+  }
+  /* affichage des sous menus en colonnes */
+  div.sousmenu ul{
+    display: flex;
+    flex-direction: column;
+  }
+  div.sousmenu1 ul{
+    display: flex;
+    flex-direction: column;
+  }
+   div.sousmenu2 ul{
+    display: flex;
+    flex-direction: column;
+  }
+  .newsletter{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  /*A PROPOS*/
+  .apropos {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  /*AVIS CLIENTS.HTML */
+  .avis{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  /* ECRIRE AVIS.HTML */
+  .livredor{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .decalTitre{
+    margin:0 auto;
+    max-width: 1200px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  /* POLITCONFIDENTIALITE */
+  .nostyle{
+    text-decoration: none;
+  }
+  .menu{
+    background: #FFF;
+    height: 30px;
+    border-bottom: 2px solid #E09732;
+  }
+  .fixMenu{
+    z-index: 999999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  /*       PAGE SOINS     */
+
+  .gauche p{
+    text-align: justify;
+  }
+
+  .droite p{
+    text-align: justify;
+  }
+  /*   PAGE BOUTIQUE    */
+
+  .bloc{
+    display: flex;
+    flex-direction: row;
+  }
+  .cheque{
+    flex:3;
+
+  }
+  .listeEnvie{
+    flex:1;
+  }
+  .articleAll img{
+    width:100%;
+  }
+  .cheque article{
+    margin-bottom: 10px;
+  }
+}
+
+fieldset.login {
+  width: 30%;
+  margin: 0 auto;
+}
+.login button{
+  display: block;margin:0 auto;
+}
+.create input{
+  width: 100%;
+  text-align:left;
+  background-color: #f5ae41;
+}
+.create button{
+  display: block;
+  margin:0 auto;
+}
+.create label{
+  font-weight: bold;
+}
+button {
+  background-color: #DD8B0C; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+/*////////////////////////////////////////// ADMIN ///////////////////////////////////////////////////*/
+.ligneDetail{
+
+  background-color: #FFE6BE;
+  color : grey;
+  text-align:left;
+}
+.dashboard table{
+display : block;
+margin: 0 auto;
+padding:0;
+
+}
+legend{
+  overflow: hidden;
+}
+.admin{
+  width:50%;
+  display:block;
+  margin: 0 auto;
+}
+.adminForm{
+  width: 50%;
+  margin:0 auto;
+  display:block;
+  text-align: center;
+}
+.adminForm input{
+  width:100%;
+}
+label.addProduct {
+  text-align: left;
+  padding:0;
+
+}
+.addProduct {
+    width : 20%;
+  margin: 0;
+
+  -webkit-box-sizing: border-box; /* Pour les anciennes versions des navigateurs WebKit */
+     -moz-box-sizing: border-box; /* Pour tous les navigateurs Gecko */
+          box-sizing: border-box;
+}
+ fieldset.addProduct{
+
+  margin: 0 auto;
+}
+fieldset.addProduct input[type="radio"]{
+  width:10%;
+  padding:0;
+  margin:0;
+}
+ fieldset.addProduct input{
+  display:inline-block;
+  width: 100%;
+  }
+  #publie{
+    width:100%;
+  }
+label.addProduct{
+  text-align: left !important;
+}
+.categorie table{
+  margin: 0 auto;
+}
+form.categorie {
+  display:block;
+
+text-align: center;
+margin-top: 10px;
+}
+label.categorie{
+  padding: 10px;
+}
+.categorie button{
+  margin-top: 10px;
+}
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+#display th:nth-last-child(1){
+  width:12%;
+}
+#display th:nth-last-child(2){
+  width:12%;
+}
+#display th:nth-child(2){
+  width:20%;
+}
+#display th{
+  overflow: hidden;
+  height:10%;
+}
+.livreortab th:nth-child(4){
+  width:50%;
+}
+.livreortab th:nth-last-child(4){
+  width:20%;
+}
+
+
+
+
+
+
+
+.dashboard{
+  margin-bottom: 50px;
+}
+.deconnexion{
+  position:relative;
+}
+.deconnexion h1{
+  text-align: center;
+
+}
+.login{
+  background-color: #DD8B0C;
+  color:white;
+  border: solid black 2px;
+  padding: 2px;
+position: absolute;
+display: block;
+right: 0;
+top: 0;
+width: auto;
+margin-right: 5%;
+}

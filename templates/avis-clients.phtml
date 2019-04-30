@@ -1,0 +1,37 @@
+<?php include 'header.php'; ?>
+					<main class='avis'>
+						<h1>Livre d'or Soins et Sens</h1>
+						<p>Vous avez bénéficié d'un massage ou d'un soin avec Stéphanie Dessart. Vous souhaitez faire part de votre vécu pendant la (ou les) séance(s).</p>
+
+						<p>Signez le livre d'or et laissez votre avis aux internautes ! Votre avis sera publié après validation par le modérateur du site.</p>
+						<p class='livreor'><a href='ecrire-avis.html'>Signer le livre d'or</a></p>
+						 <?php foreach($avis_clients as $key => $avis) :?>
+						<h2><?= $avis['Nom'] ?> Publié il y a <?= dateAvis($avis['Date']); ?></h2>
+						
+						<p><?= $avis['Titre'] ?> <?= etoiles($avis['Note']) ?> </p> 
+						<p><?= $avis['Commentaire'] ?> </p>
+					    
+
+
+					    <?php endforeach; ?>
+						
+
+
+					    <!--
+						<h2>De Hélène S. publié il y a 6 jours</h2>
+
+						<p>Détente assurée <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> </p>
+						<p>Très bon accueil dans un cadre agréable, j'ai bénéficié d'un massage complet et de grande qualité et suis ressortie détendue et ressourcée. Merci beaucoup.</p>
+						<h2>De Arthur G. publié il y a 10 jours</h2>
+						<p>Décevant <i class="fas fa-star"></i></p>
+						<p>Très décu ! Stéphanie a refusé de m'accorder les petits extras que je lui ai demandé.</p>
+						<h2>De Romain B. publié il y a 14 jours</h2>
+
+						<p>Relaxation garantie <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+						<p>Relaxation et évasion assurées. La sensation procurée par les pierres chaudes est très agréable et reposante. En plus de cela, table chauffante, stimulation de l'odorat, l'ouïe etc. Bien plus qu'un simple massage bien-être, l'accent est mis sur la relaxation avec l'imagerie mentale, l'introspection et la respiration. Après une heure de massage/relaxation, on en ressort complètement relâché, apaisé et réénergisé à condition de savoir lâcher prise. Je recommande fortement, bon accueil et on sent l'expérience de la praticienne.</p>
+						<h2>De Catherine E. publié il y a 1 mois</h2>
+						<p>Divin <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+						<p>Il y a des heures que j'en suis sortie...et j'ai l'impression d'y être encore ! Véritable effet à libération prolongée. Expérience magique, un vrai voyage dont on sort comme différent. J'entends encore le bruit des vagues et celui de la rivière.</p>
+					-->
+					</main>
+<?php include 'footer.php'; ?>

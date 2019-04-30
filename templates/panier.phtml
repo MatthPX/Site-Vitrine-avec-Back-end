@@ -1,0 +1,29 @@
+<?php include 'header.php'; ?>
+	<body>
+			<?php if(!isset($_SESSION['connected'])) :?>
+			<main>
+			<section class='formulaire'>   <!-- VErifie si la condition est FALSE grâce à '!' -->
+		<p> Merci de vous connecter </p>
+		<form action='login.php' method='post' > <!--mETHOD GET pour laisser une trace ??  + FORMULAIRE RELANCE AUTOMATIQUEMENT LA PAGE-->
+		<p><label>Login/Email : </label><input type='text' name='login'></p>
+		<p><label>Mot de passe : </label><input type='password' name='mdp'></p>
+			<button>Valider</button>
+		</form>
+</section>
+</main>
+	<?php else:?>
+		<main>
+			<section>
+		<p>Votre panier <?= $_SESSION['Log'] ?> </p>
+		
+		<a href="deconnexion.php">Se déconnecter</a>
+			
+			<div id="panier-detail"></div>
+			<button id="btnPanier">Valider la commande</button>
+			<button id="btnViderPanier">Vider le panier</button>
+			<script src="validerPanier.js"></script> 
+			<?php endif; ?>
+			</section>
+		</main>
+		</body>
+<?php include 'footer.php'; ?>

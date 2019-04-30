@@ -1,0 +1,44 @@
+<?php include 'header.php'; ?>
+	<?php if(!isset($_SESSION['admin'])) :?>   <!-- VErifie si la condition est FALSE grâce à '!' -->
+		
+		<?php header('Location: admin.html'); ?>
+
+	<?php else:?>
+		<div class='deconnexion'>
+		<h1>Bonjour <?= $_SESSION['Log'] ?> </h1>
+				<a href="deconnexion.php" class='login'>Se déconnecter</a>
+			</div>
+<h2> A modérer </h2>
+			<?php endif; ?>
+			<fieldset class='dashboard'><legend><h3>Modération</h3></legend>
+			<table >
+				<thead>
+					<tr >
+						<th>Date</th>
+						<th>Titre</th>
+						<th>Avis</th>
+						<th>Nom </th>
+						<th>Note</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+<?php foreach($moderation_avis as $key => $avis) :?>
+				<tbody id='display'>
+					
+					<th><?= $avis['Date'] ?></th>
+					<th><?= $avis['Titre'] ?></th>
+					<th><?= $avis['Commentaire'] ?></th>
+					<th><?= $avis['Nom'] ?>  </th>
+					<th><?= etoiles($avis['Note']) ?></th>
+					<th><a href='valider.php?id=<?=$avis['ID']?>'> > Valider ? </a><br>
+					 <a href='supprimer.php?id=<?=$avis['ID']?>'> > Supprimer ? </a></th>
+				</tbody>
+			<?php endforeach ?>
+				</fieldset>
+			</table>
+						<script src="script.js"></script>
+		</body>
+	</html>
+
+
+
